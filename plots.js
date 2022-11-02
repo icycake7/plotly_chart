@@ -2,7 +2,6 @@ function init() {
   var selector = d3.select("#selDataset");
 
   d3.json("samples.json").then((data) => {
-    console.log(data);
     var sampleNames = data.names;
     sampleNames.forEach((sample) => {
       selector
@@ -13,10 +12,6 @@ function init() {
 })}
 
 init();
-
-// function optionChanged(newSample) {
-//   console.log(newSample);
-// }
 
 function optionChanged(newSample) {
   buildMetadata(newSample);
